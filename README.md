@@ -40,12 +40,16 @@ This is a calendar application developed as part of the "Fundamentals of Program
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/calendar-project.git
+   ```
 2. Navigate to the project directory:
    ```bash
    cd calendar-project
+   ```
 3. Compile the project using your preferred C++ compiler. For example, using GCC:
   ```bash
-  g++ -o calendar main.cpp -lsfml-graphics -lsfml-window -lsfml-system
+   g++ -o calendar main.cpp -lsfml-graphics -lsfml-window -lsfml-system
+   ```
 4. Run the compiled executable:
   ```bash
   ./calendar
+   ```
