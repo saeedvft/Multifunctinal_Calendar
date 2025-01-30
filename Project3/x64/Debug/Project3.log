@@ -1,0 +1,52 @@
+﻿  main.cpp
+C:\Users\Saeed\Desktop\C\Project3\Project3\main.cpp(47,55): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\Users\Saeed\Desktop\C\Project3\Project3\main.cpp(46,81): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\Users\Saeed\Desktop\C\Project3\Project3\main.cpp(87,56): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Saeed\Desktop\C\Project3\Project3\main.cpp(87,52): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Saeed\Desktop\C\Project3\Project3\main.cpp(101,16): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Saeed\Desktop\C\Project3\Project3\main.cpp(102,16): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Saeed\Desktop\C\Project3\Project3\main.cpp(108,52): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Saeed\Desktop\C\Project3\Project3\main.cpp(108,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Saeed\Desktop\C\Project3\Project3\main.cpp(118,16): warning C4244: 'initializing': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Saeed\Desktop\C\Project3\Project3\main.cpp(119,16): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Saeed\Desktop\C\Project3\Project3\main.cpp(126,53): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Saeed\Desktop\C\Project3\Project3\main.cpp(126,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Saeed\Desktop\C\Project3\Project3\main.cpp(130,54): warning C4244: '=': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Saeed\Desktop\C\Project3\Project3\main.cpp(151,80): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Project3.vcxproj -> C:\Users\Saeed\Desktop\C\Project3\x64\Debug\Project3.exe

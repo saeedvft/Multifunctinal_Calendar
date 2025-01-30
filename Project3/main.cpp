@@ -2,10 +2,10 @@
 #include <iostream> 
 #include <ctime>
 #include <cstring>
-#include <bits/stdc++.h>
 #include <fstream>
 #include <stdlib.h>
 #include <SFML\Network.hpp>
+#include <sstream>
 
 using namespace std;
 
@@ -20,7 +20,7 @@ struct timeset
     int second;
 };
 
-struct  timeset getCurrentTime(){
+struct  timeset getCurrentTime() {
     struct tm newtime;
     time_t now = time(0);
     localtime_s(&newtime, &now);
@@ -40,11 +40,11 @@ struct  timeset getCurrentTime(){
 
 int main()
 {
-    
 
-    sf::RenderWindow window(sf::VideoMode(1920, 1080), "Project", sf::Style::Titlebar | sf::Style::Close | sf::Style::Resize);
+
+    sf::RenderWindow window(sf::VideoMode(1120, 970), "Project", sf::Style::Titlebar | sf::Style::Close | sf::Style::Resize);
     window.setPosition(sf::Vector2i(sf::VideoMode::getDesktopMode().width * 0.5 - window.getSize().x * 0.5,
-                                    sf::VideoMode::getDesktopMode().height * 0.45 - window.getSize().y * 0.5));
+        sf::VideoMode::getDesktopMode().height * 0.45 - window.getSize().y * 0.5));
 
     struct  timeset currenttime = getCurrentTime();
 
@@ -57,13 +57,15 @@ int main()
     f3.loadFromFile("Dana-ExtraBold.ttf");
     sf::Font f4;
     f4.loadFromFile("Dana-Regular.ttf");
-    
+
     sf::Text Calendar;
     Calendar.setFont(f4);
-    Calendar.setString("Calendar 2023");
+    ostringstream oss;
+    oss << "Calendar " << currenttime.year;
+    Calendar.setString(oss.str());
     Calendar.setFillColor(sf::Color(255, 255, 255));
     Calendar.setCharacterSize(70);
-    Calendar.setPosition(sf::Vector2f(260, 20));
+    Calendar.setPosition(sf::Vector2f(340, 20));
 
     string Months[12] = { "JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE",
                           "JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER" };
@@ -147,7 +149,7 @@ int main()
                     MonthNums[i - 1][j - 1].setFillColor(sf::Color(219, 90, 66));
                     MonthNums[i - 1][j - 1].setFont(f3);
                     circle.setPosition(MonthNums[i - 1][j - 1].getPosition().x - 3.5,
-                                       MonthNums[i - 1][j - 1].getPosition().y - 2);
+                        MonthNums[i - 1][j - 1].getPosition().y - 2);
                     circle.setFillColor(sf::Color(134, 187, 216, 0));
                     circle.setOutlineColor(sf::Color(255, 176, 2));
                     circle.setOutlineThickness(3);
@@ -160,7 +162,7 @@ int main()
                 {
                     MonthNums[i - 1][j - 1].setFillColor(sf::Color(164, 44, 214));
                 }
-                
+
             }
         }
     }
@@ -186,9 +188,9 @@ int main()
     window.draw(Calendar);
     window.draw(circle);
     int notes_freq[12][31];
-    int tmp[12][31] = {0};
-    
-    
+    int tmp[12][31] = { 0 };
+
+
     string notes[12][31];
 
     for (int i = 0; i < 12; i++)
@@ -252,7 +254,7 @@ int main()
                 window.close();
             }
         }
-        
+
         window.clear(sf::Color(44, 47, 51)); //windows BG color
         window.draw(Calendar);
         window.draw(circle);
@@ -272,7 +274,7 @@ int main()
                 window.draw(MonthNums[i][j]);
             }
         }
-        
+
         string A; //commands
         string B; //note
         getline(cin, A);
@@ -305,7 +307,7 @@ int main()
             }
             window.display();
         }
-        
+
         else if (A == "UNFLAG") {
             cout << "Please insert month:";
             cin >> month;
@@ -388,7 +390,7 @@ int main()
             for (int i = 0; i < 12; i++) {
                 for (int j = 0; j < MonthDays[i]; j++) {
                     if (notes_freq[i][j]) {
-                        myfile << i + 1<< " " << j + 1 << " " << notes[i][j] << "\n";
+                        myfile << i + 1 << " " << j + 1 << " " << notes[i][j] << "\n";
                     }
                     if (tmp[i][j]) {
                         myflag << i + 1 << " " << j + 1 << "\n";
@@ -421,6 +423,6 @@ int main()
 
     }
 
-    
+
 }
 
