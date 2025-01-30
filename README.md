@@ -1,5 +1,8 @@
 # Calendar Project
 
+![image](https://github.com/user-attachments/assets/03c9ed9e-e796-4db2-8f4b-806da9e3371c)
+
+
 This is a calendar application developed as part of the "Fundamentals of Programming" course. The project is designed to help users manage their schedules, add notes, set reminders, and flag important dates. The application is built using C++ and the SFML (Simple and Fast Multimedia Library) for graphical rendering.
 
 ## Features
